@@ -1,0 +1,94 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>12f5e06b-db89-45a3-8925-178ce5d7f3ef</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>JDBC_conn.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>Learn_PySpark</Name>
+    <RootNamespace>Learn_PySpark</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Base\DB_Actions.py" />
+    <Compile Include="Base\DB_Connection.py" />
+    <Compile Include="JDBC_conn.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Learn_PySpark.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Base\" />
+    <Folder Include="Base\__pycache__\" />
+    <Folder Include="sqljdbc_12.2\" />
+    <Folder Include="sqljdbc_12.2\enu\" />
+    <Folder Include="sqljdbc_12.2\enu\auth\" />
+    <Folder Include="sqljdbc_12.2\enu\auth\x64\" />
+    <Folder Include="sqljdbc_12.2\enu\auth\x86\" />
+    <Folder Include="sqljdbc_12.2\enu\samples\" />
+    <Folder Include="sqljdbc_12.2\enu\samples\adaptive\" />
+    <Folder Include="sqljdbc_12.2\enu\samples\alwaysencrypted\" />
+    <Folder Include="sqljdbc_12.2\enu\samples\azureactivedirectoryauthentication\" />
+    <Folder Include="sqljdbc_12.2\enu\samples\connections\" />
+    <Folder Include="sqljdbc_12.2\enu\samples\constrained\" />
+    <Folder Include="sqljdbc_12.2\enu\samples\dataclassification\" />
+    <Folder Include="sqljdbc_12.2\enu\samples\datatypes\" />
+    <Folder Include="sqljdbc_12.2\enu\samples\resultsets\" />
+    <Folder Include="sqljdbc_12.2\enu\samples\sparse\" />
+    <Folder Include="sqljdbc_12.2\enu\xa\" />
+    <Folder Include="sqljdbc_12.2\enu\xa\x64\" />
+    <Folder Include="sqljdbc_12.2\enu\xa\x86\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Base\__pycache__\DB_Actions.cpython-39.pyc" />
+    <Content Include="Base\__pycache__\DB_Connection.cpython-39.pyc" />
+    <Content Include="sqljdbc_12.2\enu\auth\x64\mssql-jdbc_auth-12.2.0.x64.dll" />
+    <Content Include="sqljdbc_12.2\enu\auth\x86\mssql-jdbc_auth-12.2.0.x86.dll" />
+    <Content Include="sqljdbc_12.2\enu\install.txt" />
+    <Content Include="sqljdbc_12.2\enu\license.txt" />
+    <Content Include="sqljdbc_12.2\enu\mssql-jdbc-12.2.0.jre11.jar" />
+    <Content Include="sqljdbc_12.2\enu\mssql-jdbc-12.2.0.jre8.jar" />
+    <Content Include="sqljdbc_12.2\enu\redist.txt" />
+    <Content Include="sqljdbc_12.2\enu\release.txt" />
+    <Content Include="sqljdbc_12.2\enu\samples\adaptive\ExecuteStoredProcedures.java" />
+    <Content Include="sqljdbc_12.2\enu\samples\adaptive\readLargeData.java" />
+    <Content Include="sqljdbc_12.2\enu\samples\adaptive\updateLargeData.java" />
+    <Content Include="sqljdbc_12.2\enu\samples\alwaysencrypted\AlwaysEncrypted.java" />
+    <Content Include="sqljdbc_12.2\enu\samples\azureactivedirectoryauthentication\AzureActiveDirectoryAuthentication.java" />
+    <Content Include="sqljdbc_12.2\enu\samples\connections\ConnectDataSource.java" />
+    <Content Include="sqljdbc_12.2\enu\samples\connections\ConnectURL.java" />
+    <Content Include="sqljdbc_12.2\enu\samples\constrained\ConstrainedDelegation.java" />
+    <Content Include="sqljdbc_12.2\enu\samples\dataclassification\DataDiscoveryAndClassification.java" />
+    <Content Include="sqljdbc_12.2\enu\samples\datatypes\BasicDataTypes.java" />
+    <Content Include="sqljdbc_12.2\enu\samples\datatypes\SpatialDataTypes.java" />
+    <Content Include="sqljdbc_12.2\enu\samples\datatypes\SqlXmlDataType.java" />
+    <Content Include="sqljdbc_12.2\enu\samples\resultsets\CacheResultSet.java" />
+    <Content Include="sqljdbc_12.2\enu\samples\resultsets\RetrieveResultSet.java" />
+    <Content Include="sqljdbc_12.2\enu\samples\resultsets\UpdateResultSet.java" />
+    <Content Include="sqljdbc_12.2\enu\samples\sparse\SparseColumns.java" />
+    <Content Include="sqljdbc_12.2\enu\thirdpartynotices.txt" />
+    <Content Include="sqljdbc_12.2\enu\xa\x64\sqljdbc_xa.dll" />
+    <Content Include="sqljdbc_12.2\enu\xa\x86\sqljdbc_xa.dll" />
+    <Content Include="sqljdbc_12.2\enu\xa\xa_install.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
