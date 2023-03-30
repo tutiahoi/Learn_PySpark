@@ -9,7 +9,7 @@ conf = SparkConf() \
 sc = SparkContext(conf=conf)
 sqlContext = SQLContext(sc)
 spark = sqlContext.sparkSession
-#demo 2023
+#demo 30/03/2023
 serverName = "localhost"
 database = "DE_Study"
 table = "dbo.OrderTbl"
